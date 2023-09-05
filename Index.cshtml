@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+    body {
+        background-color: black;
+    }
+
+    .image {
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .text {
+        position: absolute;
+        top: 8px;
+        left: 0px;
+    }
+
+    marquee {
+        top: 8px;
+        font-size: 100px;
+        font-weight: 800;
+        color: #ba3f38;
+        font-family: sans-serif;
+    }
+</style>
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="~/Home/Services">Services</a>
+        <a href="~/Home/About">About</a>
+        <a href="~/Home/Contact">Contact</a>
+    </div>
+    <span style="font-size:30px;color:white;cursor:pointer" onclick="openNav()">&#9776; menu</span>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <div class="image">
+
+        <img src="https://c4.wallpaperflare.com/wallpaper/59/97/72/design-sofa-furniture-watch-wallpaper-preview.jpg" alt="PVF" width="1180" height="550">
+        <div class="text">
+            <marquee>Pine Valley Furnitures </marquee>
+        </div>
+    </div>
+</body>
